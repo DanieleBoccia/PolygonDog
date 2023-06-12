@@ -1,10 +1,4 @@
-/**
-* Template Name: iPortfolio
-* Updated: May 30 2023 with Bootstrap v5.3.0
-* Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
+
 
 /*--------------------------------------------------------------
 # General
@@ -159,6 +153,7 @@ h6 {
 /* Desktop Navigation */
 .nav-menu {
   padding: 30px 0 0 0;
+  
 }
 
 .nav-menu * {
@@ -708,6 +703,7 @@ section {
 }
 
 .portfolio-details .portfolio-description p {
+  color: rgb(85, 85, 85);
   padding: 0;
 }
 
@@ -1043,15 +1039,16 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Breadcrumbs
+# Breadcrumbs Polygon Dog Pga
 --------------------------------------------------------------*/
 .breadcrumbs {
+  margin-top: 0px;
   padding: 20px 0;
   background: #f9f9f9;
 }
 
 .breadcrumbs h2 {
-  font-size: 26px;
+  font-size: 24px;
   font-weight: 300;
 }
 
@@ -1075,7 +1072,12 @@ section {
   content: "/";
 }
 
-@media (max-width: 768px) {
+.breadcrumbs ol li:first-child img {
+  width: 50px; /* Imposta la dimensione desiderata per l'immagine */
+  height: auto; /* Per mantenere l'aspetto proporzionale */
+}
+
+@media (max-width: 1200px) {
   .breadcrumbs .d-flex {
     display: block !important;
   }
@@ -1087,7 +1089,67 @@ section {
   .breadcrumbs ol li {
     display: inline-block;
   }
+
+  .breadcrumbs h2 {
+    font-size: 26;
+    float: left;
+    margin-right: 30px;
+  }
+
+  .breadcrumbs ol li:first-child img {
+    width: 30px; /* Imposta la dimensione desiderata per l'immagine */
+    height: auto; /* Per mantenere l'aspetto proporzionale */
+    display: block !important;
+  }
 }
+
+/*--------------------------------------------------------------
+# Breadcrumbs Portfolio-details page
+--------------------------------------------------------------*/
+.breadcrumbsportfolio {
+  padding: 20px 0;
+  background: #f9f9f9;
+}
+
+.breadcrumbsportfolio h2 {
+  font-size: 26px;
+  font-weight: 300;
+}
+
+.breadcrumbsportfolio ol {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 15px;
+}
+
+.breadcrumbsportfolio ol li+li {
+  padding-left: 10px;
+}
+
+.breadcrumbsportfolio ol li+li::before {
+  display: inline-block;
+  padding-right: 10px;
+  color: #0e2442;
+  content: "/";
+}
+
+@media (max-width: 768px) {
+  .breadcrumbs .d-flex {
+    display: block !important;
+  }
+
+  .breadcrumbsportfolio ol {
+    display: block;
+  }
+
+  .breadcrumbsportfolio ol li {
+    display: inline-block;
+  }
+}
+
 
 /*--------------------------------------------------------------
 # Footer
@@ -1291,6 +1353,56 @@ section {
     display: none;
   }
 }
+
+/*--------------------------------------------------------------
+# HOME POLYGON DOG
+--------------------------------------------------------------*/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+div {
+  display: block;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+.headerpolygon {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  padding: 7px 10%;
+  background-color: rgba(26, 25, 25, 0.8);
+  /* backdrop-filter options */
+  /*
+  backdrop-filter: saturate(100%) blur(0px) brightness(1) contrast(1) grayscale(0) hue-rotate(0deg) invert(0) sepia(0%);
+  */
+  -webkit-backdrop-filter: saturate(200%) blur(20px);
+  backdrop-filter: saturate(200%) blur(10px);
+}
+
+.menupolygon {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.menupolygon a {
+  font-size: 12px;
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  color: #c2c2c4;
+  padding: 0.5em 1em;
+}
+
+.menupolygon a:hover {
+  color: #fff; /* Aggiunto per modificare il colore del testo a bianco durante il passaggio del mouse */
+}
+
+
 
 
 

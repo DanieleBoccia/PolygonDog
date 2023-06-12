@@ -37,7 +37,19 @@
 
 </head>
 
+
 <body>
+
+  <main>
+  
+     <div class="headerpolygon">
+        <div class="menupolygon">
+         <a href="polygondog.html">Home</a>
+         <a href="#aboutpolygondog">About</a>
+         <a href="#blog">Blog</a>
+         <a href="#supporta">Supporta</a>
+       </div>
+     </div>
 
     <!-- ======= Breadcrumbs ======= -->
     <section id="breadcrumbs" class="breadcrumbs">
@@ -61,7 +73,7 @@
 
           <div class="col-lg-8">
             <div class="portfolio-description">
-              <h2>Cos'è Polygon Dog</h2>
+              <h2>Un progetto in costruzione</h2>
               <p>
                 Polygon Dog è un progetto sperimentale fondato da Daniele Boccia che mira a rivoluzionare l'insegnamento della programmazione attraverso l'impiego massiccio del deep learning e dei modelli di linguaggio. La nostra missione è affrontare la carenza di programmatori adottando un approccio diverso, che si concentri sull'intelligenza pura anziché sull'intelligenza cristallizzata, e coinvolga coloro che non hanno una formazione accademica tradizionale.<br>
                 <br>
@@ -78,18 +90,19 @@
             <div class="portfolio-info">
               <h3>Informazioni progetto</h3>
               <ul>
-                <li><strong>Categoria</strong>: Progetto sperimentale</li>
+                <li><strong>Categoria</strong>: <span style="color: rgb(85, 85, 85);">Progetto sperimentale</span></li>
                 <li><strong>Founder</strong>: <a href="index.html">Daniele Boccia</a></li>
-                <li><strong>Data di Nascita</strong>: Maggio, 2023</li>
+                <li><strong>Data di Nascita</strong>: <span style="color: rgb(85, 85, 85);">Maggio, 2023</span></li>
                 <li><strong>URL</strong>: <a href="polygondog.html">Polygon Dog</a></li>
               </ul>
             </div>
           </div>
-
         </div>
-
       </div>
     </section><!-- End Portfolio Details Section --> 
+    
+    
+
 
   </main> <!-- End #main -->
 
@@ -123,7 +136,89 @@
   <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
 
-  <!-- Template Main JS File -->
+ <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <!--SCRIPT TYPEWRITING GPT OUTPUTINPUT-->
+
+  <script>
+    function setupTypewriter(t) {
+      var HTML = t.innerHTML;
+      t.innerHTML = "";
+      var cursorPosition = 0,
+        tag = "",
+        writingTag = false,
+        tagOpen = false,
+        typeSpeed = -100,
+        tempTypeSpeed = 0;
+    
+      var type = function() {
+        if (writingTag === true) {
+          tag += HTML[cursorPosition];
+        }
+    
+        if (HTML[cursorPosition] === "<") {
+          tempTypeSpeed = 0;
+          if (tagOpen) {
+            tagOpen = false;
+            writingTag = true;
+          } else {
+            tag = "";
+            tagOpen = true;
+            writingTag = true;
+            tag += HTML[cursorPosition];
+          }
+        }
+        if (!writingTag && tagOpen) {
+          tag.innerHTML += HTML[cursorPosition];
+        }
+        if (!writingTag && !tagOpen) {
+          if (HTML[cursorPosition] === " ") {
+            tempTypeSpeed = 0;
+          } else {
+            tempTypeSpeed = Math.random() * typeSpeed + 50;
+          }
+          t.innerHTML += HTML[cursorPosition];
+        }
+        if (writingTag === true && HTML[cursorPosition] === ">") {
+          tempTypeSpeed = Math.random() * typeSpeed + 50;
+          writingTag = false;
+          if (tagOpen) {
+            var newSpan = document.createElement("span");
+            t.appendChild(newSpan);
+            newSpan.innerHTML = tag;
+            tag = newSpan.firstChild;
+          }
+        }
+    
+        cursorPosition += 1;
+        if (cursorPosition < HTML.length - 1) {
+          setTimeout(type, tempTypeSpeed);
+        }
+      };
+    
+      return {
+        type: type,
+      };
+    }
+    
+    var typer = document.getElementById("typewriter");
+    
+    var observer = new IntersectionObserver(
+      function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            typewriter = setupTypewriter(typer);
+            typewriter.type();
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1 } // Imposta la soglia di visibilità
+    );
+    
+    observer.observe(typer);
+    
+  </script>
 
 </body>

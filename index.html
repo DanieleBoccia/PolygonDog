@@ -771,6 +771,9 @@ Le variabili thread-local sono spesso utilizzate per gestire le risorse che non 
               <div class="text-center"><button type="submit">Invia</button></div>
             </form>
           </div>
+          <p><em><br>
+            *Al momento il form è disattivato in quanto il servizio di hosting non supporta PHP. Si prega di contattare tramite Email o telefono.<br> Grazie per la pazienza.
+          </em></p>
         </div>
 
       </div>
@@ -848,15 +851,15 @@ Le variabili thread-local sono spesso utilizzate per gestire le risorse che non 
           tag.innerHTML += HTML[cursorPosition];
         }
         if (!writingTag && !tagOpen) {
-          if (HTML[cursorPosition] === " ") {
+          if (HTML[cursorPosition] === "") {
             tempTypeSpeed = 0;
           } else {
-            tempTypeSpeed = Math.random() * typeSpeed + 50;
+            tempTypeSpeed = Math.random() * typeSpeed -100;
           }
           t.innerHTML += HTML[cursorPosition];
         }
         if (writingTag === true && HTML[cursorPosition] === ">") {
-          tempTypeSpeed = Math.random() * typeSpeed + 50;
+          tempTypeSpeed = Math.random() * typeSpeed -100;
           writingTag = false;
           if (tagOpen) {
             var newSpan = document.createElement("span");

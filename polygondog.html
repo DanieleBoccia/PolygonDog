@@ -232,15 +232,15 @@ In definitiva, Studying While Working rappresenta un'alternativa innovativa al t
           tag.innerHTML += HTML[cursorPosition];
         }
         if (!writingTag && !tagOpen) {
-          if (HTML[cursorPosition] === " ") {
+          if (HTML[cursorPosition] === "") {
             tempTypeSpeed = 0;
           } else {
-            tempTypeSpeed = Math.random() * typeSpeed + 50;
+            tempTypeSpeed = Math.random() * typeSpeed -100;
           }
           t.innerHTML += HTML[cursorPosition];
         }
         if (writingTag === true && HTML[cursorPosition] === ">") {
-          tempTypeSpeed = Math.random() * typeSpeed + 50;
+          tempTypeSpeed = Math.random() * typeSpeed -100;
           writingTag = false;
           if (tagOpen) {
             var newSpan = document.createElement("span");

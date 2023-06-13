@@ -703,7 +703,6 @@ section {
 }
 
 .portfolio-details .portfolio-description p {
-  color: rgb(85, 85, 85);
   padding: 0;
 }
 
@@ -1189,8 +1188,6 @@ section {
 # AUTOMATION
 --------------------------------------------------------------*/
 
-
-
 .var-highlight{
   color: #d766e3;
 }
@@ -1400,6 +1397,39 @@ div {
 
 .menupolygon a:hover {
   color: #fff; /* Aggiunto per modificare il colore del testo a bianco durante il passaggio del mouse */
+}
+
+/*--------------------------------------------------------------
+# STUDYING WHILE WORKING
+--------------------------------------------------------------*/
+
+.secondasezionepolygondog {
+  font-size: 35px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: white;
+  padding: 0;
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+}
+
+.containerGptPolygon {
+  padding: 30px; /* Modifica la dimensione del padding come preferisci */
+  box-shadow: inset 0 0 0 1px #3fa93b; /* Aggiungi un'ombreggiatura interna per il bordo */
+  max-width: 100%;
+}
+
+/*--------------------------------------------------------------
+# SECONDA SEZIONE STUDYING WHILE WORKING
+--------------------------------------------------------------*/
+
+.swwsection {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: black;
+  padding: 0;
+  font-family: "Raleway", sans-serif;
 }
 
 

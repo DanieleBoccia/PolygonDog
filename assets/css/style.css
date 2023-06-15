@@ -470,6 +470,42 @@ section {
 }
 
 /*--------------------------------------------------------------
+# Tools
+--------------------------------------------------------------*/
+
+.tools-container {
+  display: flex;
+  flex-wrap: wrap; /* Aggiunge questa linea per permettere il "wrap" degli elementi */
+}
+
+.tool-icon {
+  width: 100px;
+  height: auto;
+  margin-right: 10px;
+  margin-bottom: 10px; /* Aggiunge un margine inferiore per creare spazio tra le righe */
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+  object-fit: contain;
+}
+
+.tool-icon:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+/* Regole CSS specifiche per dispositivi con larghezza inferiore a 768 pixel */
+@media (max-width: 767px) {
+  .tools-container {
+    justify-content: center; /* Centra gli elementi orizzontalmente */
+  }
+
+  .tool-icon {
+    width: calc(50% - 10px); /* Imposta la larghezza delle icone al 50% del contenitore, sottraendo il margine destro */
+  }
+}
+
+
+/*--------------------------------------------------------------
 # Resume
 --------------------------------------------------------------*/
 .resume .resume-title {
